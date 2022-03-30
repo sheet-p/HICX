@@ -16,7 +16,7 @@ public class FileSystemTest {
     @Test
     public void checkFileMovedToProcessed() {
         FileSystem dir = new FileSystem("/a/abc.txt");
-        dir.addContentToFile("/a/abc.txt", "hello world...");
+        dir.addContentToFile("/a/abc.txt", "hicx assignment. hicx assignment is on parsing. hicx. assignment");
         assertNotNull(dir.root.dirs.get("processed"));
     }
 }
