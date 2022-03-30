@@ -11,6 +11,8 @@ public class FileSystem {
     }
 
     FileSystem(String path) {
+        this();
+
         mkdir(path);
 
         //if path contains a file
@@ -46,7 +48,7 @@ public class FileSystem {
             
             //file
             else {
-                String ext = d[i].substring(d[i].indexOf("."));
+                String ext = d[i].substring(d[i].indexOf(".")+1);
                 //only create the file if it is a valid extension
                 if(Extension.contains(ext)) {
                     dir.files.add(new File(d[i], ""));
@@ -111,6 +113,6 @@ public class FileSystem {
     public static void main(String[] args) {
         FileSystem newDir = new FileSystem("/a/b/c");
         newDir.mkFile("/a/b/c/Sheet.txt");
-        newDir.addContentToFile("/a/b/c/Sheet.txt", "HICX Assignment");
+        newDir.addContentToFile("/a/b/c/Sheet.txt", "hicx assignment. hicx assignment is on parsing. hicx. assignment");
     }
 }
