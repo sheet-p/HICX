@@ -72,6 +72,33 @@ public class FileSystem {
                     String fileName = dir.files.get(j).getFileName();
                     if(fileName.equals(d[i])) {
                         dir.files.get(j).setFileContent(contents);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    public void stats(String path) {
+        Directory dir = root;
+
+        String[] d = path.split("/");
+
+        for(int i=1; i<d.length; i++) {
+            //directory
+            if(! d[i].contains("."))
+                dir = dir.dirs.get(d[i]);
+            
+            //file
+            else {
+                //getting index of file
+                for(int j=0; j<dir.files.size(); j++) {
+                    String fileName = dir.files.get(j).getFileName();
+                    if(fileName.equals(d[i])) {
+                        System.out.println("Number of words in File " + d[i] + " : " + Statistics.calcWords(dir.files.get(j).getFileContent()));
+                        System.out.println("Number of dots in File " + d[i] + " : " + Statistics.calcDots(dir.files.get(j).getFileContent()));
+                        System.out.println("Most used word in File " + d[i] + " : " + Statistics.mostUsedWord(dir.files.get(j).getFileContent()));
+                        break;
                     }
                 }
             }

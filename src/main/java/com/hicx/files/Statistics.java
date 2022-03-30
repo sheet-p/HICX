@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Statistics {
-    public int calcWords(String contents) {
+    public static int calcWords(String contents) {
         //to store the number of words
         int numWords = 0;
 
@@ -12,7 +12,7 @@ public class Statistics {
         return numWords;
     }
 
-    public int calcDots(String contents) {
+    public static int calcDots(String contents) {
         //to store the number of words
         int numDots = 0;
 
@@ -20,7 +20,7 @@ public class Statistics {
         return numDots;
     }
 
-    public String mostUsedWord(String contents) {
+    public static String mostUsedWord(String contents) {
         //frequency table
         Map<String, Integer> freq = new HashMap<>();
 
