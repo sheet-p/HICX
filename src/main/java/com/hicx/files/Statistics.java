@@ -16,7 +16,11 @@ public class Statistics {
         //to store the number of words
         int numDots = 0;
 
-        numDots = contents.split(".").length - 1;
+        String[] words = contents.split(" ");
+        for(String word : words) {
+            if(word.matches(".*[.?].*"))
+                numDots++;
+        }
         return numDots;
     }
 
@@ -37,6 +41,11 @@ public class Statistics {
             if(dict.getValue() > wordCount) {
                 wordCount = dict.getValue();
                 maxWord = dict.getKey();
+            }
+            //if count is same, then show lexicographically smaller one
+            else if(dict.getValue() == wordCount) {
+                if(dict.getKey().compareTo(maxWord) < 0)
+                    maxWord = dict.getKey();
             }
         }
 
