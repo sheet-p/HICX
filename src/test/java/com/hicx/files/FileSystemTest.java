@@ -1,6 +1,7 @@
 package com.hicx.files;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
@@ -10,5 +11,12 @@ public class FileSystemTest {
         FileSystem dir = new FileSystem();
 
         assertEquals(true, dir.root.dirs.containsKey("processed"));
+    }
+
+    @Test
+    public void checkFileMovedToProcessed() {
+        FileSystem dir = new FileSystem("/a/abc.txt");
+        dir.addContentToFile("/a/abc.txt", "hello world...");
+        assertNotNull(dir.root.dirs.get("processed"));
     }
 }
