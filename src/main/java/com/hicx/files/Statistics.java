@@ -8,7 +8,7 @@ public class Statistics {
         //to store the number of words
         int numWords = 0;
 
-        numWords = contents.split("//s*").length;
+        numWords = contents.split(" ").length;
         return numWords;
     }
 
@@ -25,7 +25,7 @@ public class Statistics {
         Map<String, Integer> freq = new HashMap<>();
 
         //split based on words
-        String[] words = contents.split("//s*");
+        String[] words = contents.split(" ");
 
         for(String word : words)
             freq.put(word, freq.getOrDefault(word, 0)+1);
