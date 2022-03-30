@@ -72,7 +72,10 @@ public class FileSystem {
                     String fileName = dir.files.get(j).getFileName();
                     if(fileName.equals(d[i])) {
                         dir.files.get(j).setFileContent(contents);
-                        break;
+                        stats(path);
+
+                        //move file to processed folder
+                        root.dirs.get("processed").files.add(new File(d[i], ""));
                     }
                 }
             }
