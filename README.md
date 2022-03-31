@@ -12,7 +12,7 @@ File class is responsible for storing the name, contents and the extension of a 
 Directory class represents the real world entity Directory which can have sub-directories inside the directory and also a multiple files within a directory.
 Directory class stores a directory along with its path (represented using a map). This class also has a list of Files. The class can be enhanced with more getter and setter methods in the future for easier access (if need be).
 
-### Statistis
+### Statistics
 Statistics class models all different operations that can be performed on the contents of a File to get relevant stats about the file. The class currently supports:
 - counting the number of words in a file
 - counting number of dots in a file
