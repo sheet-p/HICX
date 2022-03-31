@@ -38,4 +38,4 @@ The application is packaged using maven. If maven is installed in the local syst
 ```
 mvn clean test
 ```
-This will build and run the application and test. The outputof the tests can be verified in the terminal itself.
+This will build and run the application and test. The output of the tests can be verified in the terminal itself.
