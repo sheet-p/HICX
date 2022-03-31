@@ -1,8 +1,8 @@
 # **Simple File Parser Application**
 
-##Responsibility of the classes
+## Responsibility of the classes
 
-###Extension Enumeration
+### Extension Enumeration
 This enumeration lists the file extensions that the application currently supports. The application can be scaled in the future by adding mrore file types without changing any other class code.
 
 ###File
