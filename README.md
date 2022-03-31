@@ -30,8 +30,10 @@ This class encompasses all the relevant functionalities of a simple File Parser 
 JUnit tests are written to check the proper working of the application and its relelvant functionalities. This test class can be further extended in the future to add more relevant tests.
 The tests are found under src/test/java/com/hicx/files/FileSystemTest.java
 
+Custom tests can be added by starting with the pattern "/" and then any directories or subdirectories or file names. For example - "/a/b/file.txt".
 
-##How to run the application
+
+## How to run the application
 The application can be cloned to your local and then run the main class (src/main/java/com/hicx/files/FileSystem.java).
 
 The application is packaged using maven. If maven is installed in the local system, then run the following command after cloning the repository:
