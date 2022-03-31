@@ -8,4 +8,9 @@ import java.util.Map;
 public class Directory {
     Map<String, Directory> dirs = new HashMap<>();
     List<File> files = new ArrayList<File>();
+
+    //getters
+    public List<File> getAllFiles() {
+        return this.files;
+    }
 }
